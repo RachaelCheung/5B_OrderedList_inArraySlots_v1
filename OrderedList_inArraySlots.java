@@ -6,7 +6,7 @@
   List_inArraySlots
  */
 
-public class OrderedList_inArraySlots {
+public class OrderedList_inArraySlots implements OrderedList {
 
     private List_inArraySlots list_iAS;
 
@@ -21,7 +21,16 @@ public class OrderedList_inArraySlots {
         return list_iAS.toString();
     }
 
-    
+    //return the number of elements in this list
+    public int size() {
+        return list_iAS.size();
+    }
+ 
+    //return element @index from this list
+    public int get( int index ) {
+        return list_iAS.get(index);
+    }
+	
     /** 
       Put @value where it belongs in the list.
       @pre: the list is in increasing order
@@ -34,4 +43,10 @@ public class OrderedList_inArraySlots {
          //                   + " at index " + dest);
          list_iAS.add( dest, value);
      }
+	 
+	//Remove the element at given index 
+    public int remove( int index) {
+       return list_iAS.remove(index);
+    }
+	
 }
